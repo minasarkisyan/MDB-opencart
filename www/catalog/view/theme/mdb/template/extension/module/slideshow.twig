@@ -1,0 +1,68 @@
+<div class="swiper-viewport mt-5">
+  <div id="slideshow{{ module }}" class="swiper-container">
+    <div class="swiper-wrapper"> {% for banner in banners %}
+      <div class="swiper-slide text-center">{% if banner.link %}<a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" /></a>{% else %}<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />{% endif %}</div>
+      {% endfor %} </div>
+  </div>
+  <div class="swiper-pagination slideshow{{ module }}"></div>
+  <div class="swiper-pager">
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+
+<section class="trigger-card">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+          <!--Card Primary-->
+          <div class="card text-center z-depth-3">
+            <div class="card-body">
+              <i class="fas fa-truck trigger-icon"></i>
+              <h4 class="text-uppercase font-weight-bold amber-text mt-2 mb-3"><strong>Быстрая доставка</strong></h4>
+            </div>
+          </div>
+          <!--/.Card Primary-->
+      </div>
+        <div class="col-lg-4 col-md-6">
+          <!--Card Primary-->
+          <div class="card text-center z-depth-2">
+            <div class="card-body">
+              <i class="far fa-thumbs-up trigger-icon"></i>
+              <h4 class="text-uppercase font-weight-bold amber-text mt-2 mb-3"><strong>Качественный товар</strong></h4>
+            </div>
+          </div>
+          <!--/.Card Primary-->
+
+        </div>
+          <div class="col-lg-4 col-md-6">
+
+            <!--Card Primary-->
+            <div class="card text-center z-depth-2">
+              <div class="card-body">
+                <i class="far fa-smile-wink trigger-icon"></i>
+                <h4 class="text-uppercase font-weight-bold amber-text mt-2 mb-3"><strong>Скидки и акции</strong></h4>
+              </div>
+            </div>
+            <!--/.Card Primary-->
+          </div>
+    </div>
+  </div>  
+</section>
+
+<script type="text/javascript"><!--
+$('#slideshow{{ module }}').swiper({
+	mode: 'horizontal',
+	slidesPerView: 1,
+	pagination: '.slideshow{{ module }}',
+	paginationClickable: true,
+	nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    spaceBetween: 30,
+	autoplay: 2500,
+    autoplayDisableOnInteraction: true,
+	loop: true,
+  speed: 1000
+});
+--></script>

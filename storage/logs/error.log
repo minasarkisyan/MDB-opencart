@@ -1,0 +1,26 @@
+2018-09-30 11:48:06 - PHP Warning:  A non-numeric value encountered in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:48:06 - PHP Warning:  Division by zero in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:48:06 - PHP Warning:  A non-numeric value encountered in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:48:06 - PHP Warning:  Division by zero in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:48:06 - PHP Warning:  A non-numeric value encountered in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:48:06 - PHP Warning:  Division by zero in C:\OSPanel\domains\my-shop.ru\www\admin\model\localisation\currency.php on line 141
+2018-09-30 11:57:23 - PHP Warning:  rmdir(C:/OSPanel/domains/my-shop.ru/storage/cache/48): Directory not empty in C:\OSPanel\domains\my-shop.ru\www\admin\controller\common\developer.php on line 70
+2018-09-30 13:38:26 - PHP Warning:  unlink(C:/OSPanel/domains/my-shop.ru/storage/cache/cache.catalog.language.1538318305): Permission denied in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 68
+2018-09-30 13:39:26 - PHP Warning:  fopen(C:/OSPanel/domains/my-shop.ru/storage/cache/cache.catalog.language.1538318366): failed to open stream: Permission denied in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 49
+2018-09-30 13:39:26 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 51
+2018-09-30 13:39:26 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 53
+2018-09-30 13:39:26 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 55
+2018-09-30 13:39:26 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 57
+2018-09-30 13:39:26 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 59
+2018-09-30 13:45:33 - PHP Warning:  fopen(C:/OSPanel/domains/my-shop.ru/storage/cache/cache.catalog.language.1538318733): failed to open stream: Permission denied in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 49
+2018-09-30 13:45:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 51
+2018-09-30 13:45:33 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 53
+2018-09-30 13:45:33 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 55
+2018-09-30 13:45:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 57
+2018-09-30 13:45:33 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 59
+2018-09-30 13:47:54 - PHP Warning:  fopen(C:/OSPanel/domains/my-shop.ru/storage/cache/cache.catalog.language.1538318874): failed to open stream: Permission denied in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 49
+2018-09-30 13:47:54 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 51
+2018-09-30 13:47:54 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 53
+2018-09-30 13:47:54 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 55
+2018-09-30 13:47:54 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 57
+2018-09-30 13:47:54 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in C:\OSPanel\domains\my-shop.ru\www\system\library\cache\file.php on line 59

@@ -1,0 +1,90 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-3">
+        <h5>{{ text_information }}</h5>
+        <ul class="list-unstyled">
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="col-sm-3">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_extra }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p>{{ powered }}</p>
+  </div>
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Обратный звонок</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="req.php">
+              <div class="form-row">
+                  <div class="col-md-6">
+                      <div class="md-form form-group">
+                          <input type="text" class="form-control" name="name" id="inputcall_1" placeholder="Ваше имя">
+                          <label for="inputcall_1"><i class="fas fa-user"></i></label>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="md-form form-group">
+                          <input type="text" class="form-control" name="phone" id="inputcall_2" placeholder="Ваш телефон для связи">
+                          <label for="inputcall_2"><i class="fas fa-phone"></i></label>
+                      </div>
+                  </div>
+              </div>
+              <!--<button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalClose">Отмена</button>-->
+                  <input type="submit" class="btn btn-default" id="modalPhone" value="Связаться со мной">
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--@@-->
+
+
+
+
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+
+<script type="text/javascript" src="catalog/view/javascript/bootstrap/js/mdb.min.js"></script>
+
+</body>
+</html>

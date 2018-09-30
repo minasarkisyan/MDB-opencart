@@ -1,0 +1,105 @@
+.active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+}
+
+.active-cyan .fa, .active-cyan-2 .fa, .active-cyan-3 .fa, .active-cyan-4 .fa {
+    color: #4dd0e1;
+}
+
+.header-msg i {
+	font-size: 2rem;
+	margin-left: 0.5rem;
+
+}
+
+#modal-phone {
+	font-size: 2rem;
+}
+
+.header-cart {
+	font-size: 2rem;
+}
+
+.header-cart span {
+	margin-left: 0.5rem;
+}
+
+.header-cart i {
+	font-size: 5rem;
+	color: cyan;
+}
+
+.dropdown .dropdown-item:active, .dropdown .dropdown-menu.dropdown-default .dropdown-item:hover, .dropleft .dropdown-menu.dropdown-default .dropdown-item:active, .dropleft .dropdown-menu.dropdown-default .dropdown-item:hover, .dropright .dropdown-menu.dropdown-default .dropdown-item:active, .dropright .dropdown-menu.dropdown-default .dropdown-item:hover, .dropup .dropdown-menu.dropdown-default .dropdown-item:active, .dropup .dropdown-menu.dropdown-default .dropdown-item:hover {
+    background-color: #33b5e5!important;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    border-radius: .125rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.dropdown-menu.dropdown-default {
+	padding: 1rem;
+}
+    
+.trigger-icon {
+	font-size: 5rem;
+	color: #12b886;
+}
+
+.trigger-card {
+	margin-top: 5rem;
+}
+
+.icon-cart {
+	font-size: 1.5rem;
+}
+
+.icon-cart:hover {
+   color: #12b886;
+}
+
+.navbar {
+	font-weight: 400;
+}
+
+.icon-footer {
+	font-size: 2rem;
+	margin-left: 1rem;
+
+}
+
+.icon-footer:hover {
+	color: #12b886 ;
+}
+
+#icon-phone{
+	margin-right: 1rem;
+	color:  #12b886;
+	font-size: 2rem;
+}
+
+
+#icon-whatsapp{
+	color: #0DC143;
+}
+
+#icon-viber{
+	color: #675EA9;
+}
+
+#icon-telegram{
+	color: #178DC8;
+}
+
+.price_old {
+	text-decoration: line-through;
+	margin-left: 1rem;
+}
+
+.icon-cart-cw {
+	margin-left: 4rem;
+	margin-top: 1rem;
+	color: #178DC8; 
+}
+
