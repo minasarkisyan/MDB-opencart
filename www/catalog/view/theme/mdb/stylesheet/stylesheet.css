@@ -1,3 +1,10 @@
+body {
+	color: #4f4f4f;
+	font-weight: 500;
+}
+
+
+
 .active-cyan input[type=text] {
     border-bottom: 1px solid #4dd0e1;
     box-shadow: 0 1px 0 0 #4dd0e1;
@@ -112,4 +119,44 @@
 .list-group-item {
 	font-weight: 500;
 }
+
+
+/* Block custom css opencart */
+.thumbnails {
+	overflow: auto;
+	clear: both;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.thumbnails > li {
+	margin-left: 20px;
+}
+.thumbnails {
+	margin-left: -20px;
+}
+.thumbnails > img {
+	width: 100%;
+	padding: 0 15rem;
+}
+.image-additional a {
+	margin-bottom: 20px;
+	display: block;
+	border: 1px solid #ddd;
+	padding: 1rem 1rem;
+}
+
+.thumbnails .image-additional {
+	float: left;
+	margin-left: 20px;
+}
+
+
+.img-first {
+	padding: 5rem 15rem;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+/*-@@-*/
 
