@@ -103,3 +103,13 @@
 	color: #178DC8; 
 }
 
+.list-group-hover:hover {
+	background-color: #2bbbad;
+	color: #fff;
+	font-weight: 500;
+}
+
+.list-group-item {
+	font-weight: 500;
+}
+

@@ -1,47 +1,82 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      {% if informations %}
-      <div class="col-sm-3">
-        <h5>{{ text_information }}</h5>
-        <ul class="list-unstyled">
-         {% for information in informations %}
-          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-          <li><a href="{{ return }}">{{ text_return }}</a></li>
-          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5>{{ text_extra }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
-          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
-          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
-          <li><a href="{{ special }}">{{ text_special }}</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5>{{ text_account }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ account }}">{{ text_account }}</a></li>
-          <li><a href="{{ order }}">{{ text_order }}</a></li>
-          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
-        </ul>
+<footer class="page-footer font-small blue-grey lighten-5">
+    <div style="background-color: #2bbbad;">
+      <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+           <!--@Заглушка для e-mail рассылок или html-блока@-->
+          </div>
+        </div>
       </div>
     </div>
-    <hr>
-    <p>{{ powered }}</p>
-  </div>
-</footer>
+    
+
+
+    <div class="container text-center text-md-left mt-5">
+      <div class="row mt-3 dark-grey-text">
+         {% if informations %}
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          
+          
+
+          <h6 class="text-uppercase font-weight-bold">{{ text_information }}</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          {% for information in informations %}
+          <p>
+            <a class="dark-grey-text" href="{{ information.href }}">{{ information.title }}</a>
+          </p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">{{ text_service}}</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="{{ sitemap }}">{{ text_sitemap }}</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="{{ return }}">{{ text_return }}</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="{{ contact }}">{{ text_contact }}</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="{{ manufacturer }}">{{ text_manufacturer }}</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="{{ special }}">{{ text_special }}</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Мы в соц.сетях</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <div class="col-12 text-md-left">
+            <a class="fb-ic"><i class="fab fa-facebook-f icon-footer text-info"></i></a>
+            <a class="tw-ic"><i class="fab fa-vk icon-footer text-info"></i></a>
+            <a class="gplus-ic"><i class="fab fa-google-plus-g icon-footer text-info"></i></a>
+            <a class="ins-ic"><i class="fab fa-instagram icon-footer text-info"></i></a>
+          </div>
+          <h6 class="text-uppercase font-weight-bold mt-4">Безопасность платежей</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <div class="col-12 text-md-left">
+            <a><i class="fab fa-cc-visa icon-footer text-warning"></i></a>
+            <a><i class="fab fa-cc-mastercard icon-footer text-warning"></i></a>
+            <a><i class="fab fa-cc-paypal icon-footer text-warning"></i></a>
+            <a><i class="fab fa-cc-apple-pay icon-footer text-warning"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Мы на карте</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.0221313368143!2d37.68332829633529!3d55.72421236015286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ad35aedcbeb%3A0x79ad111cc1bedc13!2z0JzQtdGC0YDQviDQktC-0LvQs9C-0LPRgNCw0LTRgdC60LjQuSDQv9GA0L7RgdC_0LXQutGC!5e0!3m2!1sru!2sua!4v1538304331037" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+      <a class="dark-grey-text" href="https://mdbootstrap.com/bootstrap-tutorial/">WEBKoth</a>
+    </div>
+  </footer>
+
 <!-- Modal -->
 <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

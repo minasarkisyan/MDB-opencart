@@ -7,6 +7,11 @@
               <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                   <div class="view overlay">
+                    <!--Добавил условие для добавления ярлыка-->
+                    {% if product.special %}
+                    <span class="badge badge-danger">Акция</span>
+                  {% endif %}
+                  <!---->
                     <img src="{{ product.thumb }}" class="card-img-top" alt="{{ product.name }}" title="{{ product.name }}">
                     <a href="{{ product.href }}">
                       <div class="mask rgba-white-slight"></div>
@@ -14,11 +19,11 @@
                   </div>
                   <span class="float-left font-weight-bold">
                           <a onclick="compare.add('{{ product.product_id }}');" class="text-warning" data-toggle="tooltip" data-placement="top" title="{{ button_compare }}">
-                        <i class="fas fa-arrows-alt-h"></i></a>
+                        <i class="fas fa-arrows-alt-h text-info"></i></a>
                       </span>
                        <span class="float-left font-weight-bold">
                           <a onclick="wishlist.add('{{ product.product_id }}');" class="text-warning" data-toggle="tooltip" data-placement="top" title="{{ button_wishlist }}">
-                        <i class="far fa-heart"></i></a>
+                        <i class="far fa-heart text-info"></i></a>
                       </span>
                   <div class="card-body text-center">
                     <h5>
@@ -42,13 +47,16 @@
                       {% endif %}
                       {% if product.price %}
                           {% if not product.special %}
+
                           <h4 class="font-weight-bold blue-text">
                                 <strong>{{ product.price }}</strong>
                             </h4>
                           {% else %}
+                            
                           <h4 class="font-weight-bold blue-text">
                             <strong>{{ product.special }}</strong><strong class="price_old">{{ product.price }}</strong>
                           </h4>
+
                           {% endif %}
                           {% if product.tax %}
                             <h4 class="font-weight-bold blue-text">
@@ -66,7 +74,7 @@
                        <i class="fas fa-paper-plane icon-cart"></i></a>
                       </span>
                       <span class="float-left font-weight-bold col-4">
-                          <a href="{{ product.thumb }}" class="text-warning" data-toggle="tooltip" data-placement="top" title="Подробнее">
+                          <a href="{{ product.href }}" class="text-warning" data-toggle="tooltip" data-placement="top" title="Подробнее">
                         <i class="fas fa-list-ul icon-cart"></i></a>
                       </span> 
                        </div>
