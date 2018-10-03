@@ -1,8 +1,8 @@
 {{ header }}
 <div id="checkout-cart" class="container">
-  <ul class="breadcrumb">
+  <ul class="breadcrumb mt-3">
     {% for breadcrumb in breadcrumbs %}
-    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}/</a></li>
     {% endfor %}
   </ul>
   {% if attention %}
@@ -29,10 +29,7 @@
     {% set class = 'col-sm-12' %}
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}
-        {% if weight %}
-        &nbsp;({{ weight }})
-        {% endif %} </h1>
+      <h1>{{ heading_title }}</h1>
       <form action="{{ action }}" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
           <table class="table table-bordered">
@@ -64,7 +61,7 @@
               <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
                   <input type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}" size="1" class="form-control" />
                   <span class="input-group-btn">
-                  <button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                  <button type="submit" data-toggle="tooltip" title="{{ button_update }}" class="btn btn-primary"><i class="fas fa-sync-alt"></i></button>
                   <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');"><i class="fa fa-times-circle"></i></button>
                   </span></div></td>
               <td class="text-right">{{ product.price }}</td>
@@ -86,17 +83,9 @@
             </tr>
             {% endfor %}
               </tbody>
-            
           </table>
         </div>
       </form>
-      {% if modules %}
-      <h2>{{ text_next }}</h2>
-      <p>{{ text_next_choice }}</p>
-      <div class="panel-group" id="accordion"> {% for module in modules %}
-        {{ module }}
-        {% endfor %} </div>
-      {% endif %} <br />
       <div class="row">
         <div class="col-sm-4 col-sm-offset-8">
           <table class="table table-bordered">

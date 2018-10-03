@@ -1,84 +1,89 @@
-<footer class="page-footer font-small blue-grey lighten-5">
-    <div style="background-color: #2bbbad;">
-      <div class="container">
-        <div class="row py-4 d-flex align-items-center">
-          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-           <!--@Заглушка для e-mail рассылок или html-блока@-->
+
+
+
+
+
+
+
+
+
+<div class="container-fluide">
+  <footer class="page-footer font-small blue-grey lighten-5">
+      <div style="background-color: #2bbbad;">
+        <div class="container">
+          <div class="row py-4 d-flex align-items-center">
+            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+             <!--@Заглушка для e-mail рассылок или html-блока@-->
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-
-
-    <div class="container text-center text-md-left mt-5">
-      <div class="row mt-3 dark-grey-text">
-         {% if informations %}
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          
-          
-
-          <h6 class="text-uppercase font-weight-bold">{{ text_information }}</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          {% for information in informations %}
-          <p>
-            <a class="dark-grey-text" href="{{ information.href }}">{{ information.title }}</a>
-          </p>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">{{ text_service}}</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
-            <a class="dark-grey-text" href="{{ sitemap }}">{{ text_sitemap }}</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="{{ return }}">{{ text_return }}</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="{{ contact }}">{{ text_contact }}</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="{{ manufacturer }}">{{ text_manufacturer }}</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="{{ special }}">{{ text_special }}</a>
-          </p>
-        </div>
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Мы в соц.сетях</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <div class="col-12 text-md-left">
-            <a class="fb-ic"><i class="fab fa-facebook-f icon-footer text-info"></i></a>
-            <a class="tw-ic"><i class="fab fa-vk icon-footer text-info"></i></a>
-            <a class="gplus-ic"><i class="fab fa-google-plus-g icon-footer text-info"></i></a>
-            <a class="ins-ic"><i class="fab fa-instagram icon-footer text-info"></i></a>
+      <div class="container text-center text-md-left mt-5">
+        <div class="row mt-3 dark-grey-text">
+           {% if informations %}
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">{{ text_information }}</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            {% for information in informations %}
+            <p>
+              <a class="dark-grey-text" href="{{ information.href }}">{{ information.title }}</a>
+            </p>
+            {% endfor %}
           </div>
-          <h6 class="text-uppercase font-weight-bold mt-4">Безопасность платежей</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <div class="col-12 text-md-left">
-            <a><i class="fab fa-cc-visa icon-footer text-warning"></i></a>
-            <a><i class="fab fa-cc-mastercard icon-footer text-warning"></i></a>
-            <a><i class="fab fa-cc-paypal icon-footer text-warning"></i></a>
-            <a><i class="fab fa-cc-apple-pay icon-footer text-warning"></i></a>
+        {% endif %}
+
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">{{ text_service}}</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text" href="{{ sitemap }}">{{ text_sitemap }}</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="{{ contact }}">{{ text_contact }}</a>
+            </p>
+            <!-- <p>
+              <a class="dark-grey-text" href="{{ manufacturer }}">{{ text_manufacturer }}</a>
+            </p> -->
+            <p>
+              <a class="dark-grey-text" href="{{ special }}">{{ text_special }}</a>
+            </p>
+
           </div>
-        </div>
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Мы на карте</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.0221313368143!2d37.68332829633529!3d55.72421236015286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ad35aedcbeb%3A0x79ad111cc1bedc13!2z0JzQtdGC0YDQviDQktC-0LvQs9C-0LPRgNCw0LTRgdC60LjQuSDQv9GA0L7RgdC_0LXQutGC!5e0!3m2!1sru!2sua!4v1538304331037" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Мы в соц.сетях</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <div class="col-12 text-md-left">
+              <a class="fb-ic"><i class="fab fa-facebook-f icon-footer text-info"></i></a>
+              <a class="tw-ic"><i class="fab fa-vk icon-footer text-info"></i></a>
+              <a class="gplus-ic"><i class="fab fa-google-plus-g icon-footer text-info"></i></a>
+              <a class="ins-ic"><i class="fab fa-instagram icon-footer text-info"></i></a>
+            </div>
+            <h6 class="text-uppercase font-weight-bold mt-4">Безопасность платежей</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <div class="col-12 text-md-left">
+              <a><i class="fab fa-cc-visa icon-footer text-warning"></i></a>
+              <a><i class="fab fa-cc-mastercard icon-footer text-warning"></i></a>
+              <a><i class="fab fa-cc-paypal icon-footer text-warning"></i></a>
+              <a><i class="fab fa-cc-apple-pay icon-footer text-warning"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Мы на карте</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.0221313368143!2d37.68332829633529!3d55.72421236015286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ad35aedcbeb%3A0x79ad111cc1bedc13!2z0JzQtdGC0YDQviDQktC-0LvQs9C-0LPRgNCw0LTRgdC60LjQuSDQv9GA0L7RgdC_0LXQutGC!5e0!3m2!1sru!2sua!4v1538304331037" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
-      <a class="dark-grey-text" href="https://mdbootstrap.com/bootstrap-tutorial/">WEBKoth</a>
-    </div>
-  </footer>
+      <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+        <a class="dark-grey-text" href="https://mdbootstrap.com/bootstrap-tutorial/">WEBKoth</a>
+      </div>
+    </footer>
+  </div>
 
-<!-- Modal -->
-<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal callback -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -113,6 +118,169 @@
 <!--@@-->
 
 
+<!--Modal order -->
+
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalOrder">Быстрый заказ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="order.php">
+              <div class="form-row">
+                  <div class="col-md-6">
+                      <div class="md-form form-group">
+                          <input type="text" class="form-control" name="name" id="order_1">
+                          <label for="inputcall_1">*Имя</label>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="md-form form-group">
+                          <input type="text" class="form-control" name="phone" id="order_2">
+                          <label for="inputcall_2">*Телефон</label>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="md-form form-group">
+                          <input type="email" class="form-control" name="email" id="order_3">
+                          <label for="inputcall_2">Email</label>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="md-form form-group">
+                          <input type="text" class="form-control" name="city" id="order_4">
+                          <label for="inputcall_2">*Ваш город</label>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="custom-control custom-radio">
+                        <input name="deliver" type="radio" class="custom-control-input"  id="order_5" checked="checked" value="Самовывоз возле метро">
+                        <label class="custom-control-label" for="order_5">Самовывоз</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="custom-control custom-radio">
+                        <input name="deliver" type="radio" class="custom-control-input"  id="order_6" value="Доставка по Москве">
+                        <label class="custom-control-label" for="order_6">Доставка по Москве - от 390руб</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="custom-control custom-radio">
+                        <input name="deliver" type="radio" class="custom-control-input"  id="order_7" value="Доставка по области">
+                        <label class="custom-control-label" for="order_7">Доставка по Московской области - от 420руб</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="custom-control custom-radio">
+                        <input name="deliver" type="radio" class="custom-control-input"  id="order_8" value="Доставка по России">
+                        <label class="custom-control-label" for="order_9">Доставка по России - от 350руб</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="" name="check" id="order_9">
+                        <label class="custom-control-label" for="order_10">Возможно доп опция</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-10">
+                    <div class="md-form">
+                        <textarea class="form-control md-textarea" name="question" id="order_10" rows="3"></textarea>
+                          <label for="order_11">Комментарий к заказу:</label>
+                        </div>
+                  </div>
+              </div>
+              <!--<button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalClose">Отмена</button>-->
+              <input type="submit" class="btn btn-primary"   id="modalOrder" value="Подтвердить заказ">
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+/*--Callback--*/
+
+$('#exampleModal').on('shown.bs.modal', function (e) {
+     $('#modalPhone').click(function(e){
+       var name = $('#inputcall_1').val();
+       var phone = $('#inputcall_2').val();
+       $('#exampleModal').modal('hide');
+       $.ajax({
+           type: "POST",
+           url: "phpscript/req.php",
+           data: {
+             name:name,
+             phone:phone
+           },
+           success: function(){
+               showAlert();
+           }
+       });
+       e.preventDefault();
+
+         function showAlert() {
+           swal({
+           title: "Спасибо за обращение!",
+           text: "В течении 15 минут с вами свяжется менеджер и ответит на ваши вопросы.",
+           icon: "success",
+           button: "Обратно на сайт",
+             });
+           }
+     });
+   });
+
+   /*--Order--*/
+
+   $('#orderModal').on('shown.bs.modal', function (e) {
+        $('#modalOrder').click(function(e){
+          var name = $('#order_1').val();
+          var phone = $('#order_2').val();
+          var email = $('#order_3').val();
+          var city = $('#order_4').val();
+          var radio = $(".custom-control-input:checked").val();
+          var check = $("#order_9:checked").val();
+          var question = $('#order_10').val();
+          $('#orderModal').modal('hide');
+          $.ajax({
+              type: "POST",
+              url: "phpscript/order.php",
+              data: {
+                name:name,
+                phone:phone,
+                email:email,
+                city:city,
+                radio:radio,
+                check:check,
+                question:question
+              },
+              success: function(){
+                  showAlert();
+              }
+          });
+          e.preventDefault();
+
+            function showAlert() {
+              swal({
+              title: "Спасибо за заявку!",
+              text: "В течении 15 минут с вами свяжется менеджер и уточнит детали по вашему заказу.",
+              icon: "success",
+              button: "Обратно на сайт",
+                });
+              }
+        });
+      });
+
+
+</script>
+
+
 
 
 {% for script in scripts %}
@@ -120,6 +288,7 @@
 {% endfor %}
 
 <script type="text/javascript" src="catalog/view/javascript/bootstrap/js/mdb.min.js"></script>
+
 
 </body>
 </html>

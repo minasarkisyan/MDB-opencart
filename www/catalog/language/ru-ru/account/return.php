@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']      = 'Возврат товара';
+$_['heading_title']      = 'Гарантии';
 
 // Text
 $_['text_account']       = 'Личный Кабинет';

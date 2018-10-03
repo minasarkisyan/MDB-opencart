@@ -3,6 +3,22 @@ body {
 	font-weight: 500;
 }
 
+button {
+	font-weight: 600;
+}
+
+
+
+#search input {
+	height: 2.5rem;
+}
+
+.btn-search{
+	margin: 0 5px;
+	height: 2.5rem;
+	margin-bottom: 1rem;
+}
+
 
 
 .active-cyan input[type=text] {
@@ -28,14 +44,21 @@ body {
 	font-size: 2rem;
 }
 
-.header-cart span {
-	margin-left: 0.5rem;
+#header-img{
+	width: 165px;
+	height: 165px;
 }
 
-.header-cart i {
-	font-size: 5rem;
-	color: cyan;
+.header p {
+	font-size: 19px;
 }
+
+#badge {
+	font-size: 1rem;
+	margin-left: 5px;
+}
+
+
 
 .dropdown .dropdown-item:active, .dropdown .dropdown-menu.dropdown-default .dropdown-item:hover, .dropleft .dropdown-menu.dropdown-default .dropdown-item:active, .dropleft .dropdown-menu.dropdown-default .dropdown-item:hover, .dropright .dropdown-menu.dropdown-default .dropdown-item:active, .dropright .dropdown-menu.dropdown-default .dropdown-item:hover, .dropup .dropdown-menu.dropdown-default .dropdown-item:active, .dropup .dropdown-menu.dropdown-default .dropdown-item:hover {
     background-color: #33b5e5!important;
@@ -48,7 +71,7 @@ body {
 .dropdown-menu.dropdown-default {
 	padding: 1rem;
 }
-    
+
 .trigger-icon {
 	font-size: 5rem;
 	color: #12b886;
@@ -67,7 +90,8 @@ body {
 }
 
 .navbar {
-	font-weight: 400;
+	font-weight: 500;
+	font-size: 1.1rem;
 }
 
 .icon-footer {
@@ -83,20 +107,26 @@ body {
 #icon-phone{
 	margin-right: 1rem;
 	color:  #12b886;
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 
 #icon-whatsapp{
+	font-size: 3rem;
 	color: #0DC143;
+	margin-left: 0rem;
 }
 
 #icon-viber{
+	font-size: 3rem;
 	color: #675EA9;
+	margin-left: 1rem;
 }
 
 #icon-telegram{
+	font-size: 3rem;
 	color: #178DC8;
+	margin-left: 1rem;
 }
 
 .price_old {
@@ -107,7 +137,7 @@ body {
 .icon-cart-cw {
 	margin-left: 4rem;
 	margin-top: 1rem;
-	color: #178DC8; 
+	color: #178DC8;
 }
 
 .list-group-hover:hover {
@@ -160,3 +190,45 @@ body {
 }
 /*-@@-*/
 
+.modal-footer i {
+	font-size: 1rem;
+}
+
+/*--@Переопределение стилей модального окна корзины @--*/
+.modal .modal-side {
+   font-size: 2rem;
+    width: 500px;
+}
+
+.btn-icon-cart{
+	 font-size: 1rem;
+	 padding: 2rem;
+	 border-radius: 10px;
+}
+
+.btn-icon-cart i {
+	font-size: 3rem;
+}
+
+/*--@ стили для alert @--*/
+.alertwraper {
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    text-align: center;
+}
+
+.alert {
+    display:inline-block;
+}
+
+#checkout {
+ display: none;
+
+}
+
+iframe {
+	margin-left: -1rem;
+}

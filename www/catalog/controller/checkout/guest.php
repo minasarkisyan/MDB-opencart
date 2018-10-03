@@ -29,17 +29,17 @@ class ControllerCheckoutGuest extends Controller {
 			$data['firstname'] = '';
 		}
 
-		if (isset($this->session->data['guest']['lastname'])) {
-			$data['lastname'] = $this->session->data['guest']['lastname'];
-		} else {
-			$data['lastname'] = '';
-		}
+		// if (isset($this->session->data['guest']['lastname'])) {
+		// 	$data['lastname'] = $this->session->data['guest']['lastname'];
+		// } else {
+		// 	$data['lastname'] = '';
+		// }
 
-		if (isset($this->session->data['guest']['email'])) {
-			$data['email'] = $this->session->data['guest']['email'];
-		} else {
-			$data['email'] = '';
-		}
+		// if (isset($this->session->data['guest']['email'])) {
+		// 	$data['email'] = $this->session->data['guest']['email'];
+		// } else {
+		// 	$data['email'] = '';
+		// }
 
 		if (isset($this->session->data['guest']['telephone'])) {
 			$data['telephone'] = $this->session->data['guest']['telephone'];

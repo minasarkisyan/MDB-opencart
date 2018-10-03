@@ -1,64 +1,89 @@
 
-<i data-toggle="dropdown" data-loading-text="{{ text_loading }}" class="fas fa-cart-arrow-down mt-4 text-default"></i>
-<span class="badge amber darken-2">{{ text_items }}</span>
-
-<div id="cart" class="btn-group btn-block">
-  <ul class="dropdown-menu pull-right" style="width: 400px">
-    
-    {% if products or vouchers %}
-    
-    <li>
-      <table class="table table-striped">
-        {% for product in products %}
-        
-        <tr>
-          <td class="text-center">
-            {% if product.thumb %} 
-            <a href="{{ product.href }}">
-              <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" /></a> {% endif %}
-            </td>
-          <td class="text-left">
-            <a href="{{ product.href }}">{{ product.name }}</a> 
-            {% if product.option %}
-            {% for option in product.option %}<br />
-            - <small>{{ option.name }} {{ option.value }}</small> 
-          {% endfor %}
-            {% endif %}
-            {% if product.recurring %} <br />
-            - <small>{{ text_recurring }} {{ product.recurring }}</small> {% endif %}</td>
-          <td class="text-right">x {{ product.quantity }}</td>
-          <td class="text-right">{{ product.total }}</td>
-          <td class="text-center"><button type="button" onclick="cart.remove('{{ product.cart_id }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
-        </tr>
-        {% endfor %}
-        {% for voucher in vouchers %}
-        <tr>
-          <td class="text-center"></td>
-          <td class="text-left">{{ voucher.description }}</td>
-          <td class="text-right">x&nbsp;1</td>
-          <td class="text-right">{{ voucher.amount }}</td>
-          <td class="text-center text-danger"><button type="button" onclick="voucher.remove('{{ voucher.key }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
-        </tr>
-        {% endfor %}
-      </table>
-    </li>
-    <li>
-      <div>
-        <table class="table table-bordered">
-          {% for total in totals %}
-          <tr>
-            <td class="text-right"><strong>{{ total.title }}</strong></td>
-            <td class="text-right">{{ total.text }}</td>
-          </tr>
-          {% endfor %}
-        </table>
-        <p class="text-right"><a href="{{ cart }}"><strong><i class="fa fa-shopping-cart"></i> {{ text_cart }}</strong></a>&nbsp;&nbsp;&nbsp;<a href="{{ checkout }}"><strong><i class="fa fa-share"></i> {{ text_checkout }}</strong></a></p>
-      </div>
-    </li>
-    {% else %}
-    <li>
-      <p class="text-center">{{ text_empty }}</p>
-    </li>
-    {% endif %}
-  </ul>
+<div id="cart">
+<button type="button" class="btn btn-outline-warning waves-effect btn-icon-cart" data-toggle="modal" data-target="#sideModalTR">
+  <i class="fas fa-cart-arrow-down text-default"></i>
+</button>
+<span id="badge" class="badge amber darken-2">{{ text_items }}</span>
 </div>
+
+
+
+
+<!-- Side Modal Top Right -->
+
+<!-- To change the direction of the modal animation change .right class -->
+<div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <!-- Add class .modal-side and then add class .modal-top-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Корзина</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        {% if products or vouchers %}
+          <li style="list-style-type: none;">
+            <table class="table table-striped">
+              {% for product in products %}
+              <tr>
+                <td class="text-center">
+                  {% if product.thumb %}
+                  <a href="{{ product.href }}">
+                    <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" /></a> {% endif %}
+                  </td>
+                <td class="text-left">
+                  <a href="{{ product.href }}">{{ product.name }}</a>
+                  {% if product.option %}
+                  {% for option in product.option %}<br />
+                  - <small>{{ option.name }} {{ option.value }}</small>
+                {% endfor %}
+                  {% endif %}
+                  {% if product.recurring %} <br />
+                  - <small>{{ text_recurring }} {{ product.recurring }}</small> {% endif %}</td>
+                <td class="text-right">x {{ product.quantity }}</td>
+                <td class="text-right">{{ product.total }}</td>
+                <td class="text-center"><button type="button" onclick="cart.remove('{{ product.cart_id }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs" data-dismiss="modal"><i class="fa fa-times"></i></button></td>
+              </tr>
+              {% endfor %}
+              {% for voucher in vouchers %}
+              <tr>
+                <td class="text-center"></td>
+                <td class="text-left">{{ voucher.description }}</td>
+                <td class="text-right">x&nbsp;1</td>
+                <td class="text-right">{{ voucher.amount }}</td>
+                <td class="text-center text-danger"><button type="button" onclick="voucher.remove('{{ voucher.key }}');" title="{{ button_remove }}" class="btn btn-danger"><i class="fa fa-times"></i></button></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </li>
+          <li style="list-style-type: none;">
+            <div>
+              <table class="table table-bordered">
+                {% for total in totals %}
+                <tr>
+                  <td class="text-right"><strong>{{ total.title }}</strong></td>
+                  <td class="text-right">{{ total.text }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </li>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info waves-effect"><a href="{{ cart }}"><i class="fas fa-shopping-cart text-warning mr-1"></i>{{ text_cart }}</a></button>
+          <button type="button" class="btn btn-outline-info waves-effect"><a href="{{ checkout }}"><i class="far fa-share-square text-warning mr-1"></i>{{ text_checkout }}</a></button>
+        </div>
+          {% else %}
+          <li style="list-style-type: none">
+            <p class="">{{ text_empty }}</p>
+            <blockquote class="font-weight-normal text-warning" style="font-size:0.7rem;">Если добавленный товар не отображается, пожалуйста перезагрузите страницу!</blockquote>
+          </li>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>

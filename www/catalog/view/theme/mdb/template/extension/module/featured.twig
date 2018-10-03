@@ -68,8 +68,8 @@
                           <a class="text-warning" data-toggle="tooltip" data-placement="top" onclick="cart.add('{{ product.product_id }}');" title="{{ button_cart }}"><i class="fa fa-shopping-cart icon-cart"></i></a>
                       </span>
                       <span class="float-left font-weight-bold col-4">
-                          <a class="text-warning" data-toggle="tooltip" data-placement="top" title="Быстрый заказ">
-                       <i class="fas fa-paper-plane icon-cart"></i></a>
+                          <a class="text-warning" data-toggle="tooltip"  data-placement="top" title="Быстрый заказ">
+                       <i class="fas fa-paper-plane icon-cart" data-toggle="modal" data-target="#orderModal"></i></a>
                       </span>
                       <span class="float-left font-weight-bold col-4">
                           <a href="{{ product.href }}" class="text-warning" data-toggle="tooltip" data-placement="top" title="Подробнее">

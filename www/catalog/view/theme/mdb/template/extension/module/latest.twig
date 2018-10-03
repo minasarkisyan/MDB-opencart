@@ -44,7 +44,7 @@
                                 <strong>{{ product.price }}</strong>
                             </h4>
                           {% else %}
-                            
+
                           <h4 class="font-weight-bold blue-text">
                             <strong>{{ product.special }}</strong><strong class="price_old">{{ product.price }}</strong>
                           </h4>
@@ -55,7 +55,7 @@
                                 <strong>{{ text_tax }} {{ product.tax }}</strong>
                             </h4>
                           {% endif %}
-                        {% endif %}       
+                        {% endif %}
                      <div class="card-footer text-center px-1">
                       <div class="row">
                         <span class="float-left font-weight-bold col-4">
@@ -63,20 +63,19 @@
                       </span>
                       <span class="float-left font-weight-bold col-4">
                           <a class="text-warning" data-toggle="tooltip" data-placement="top" title="Быстрый заказ">
-                       <i class="fas fa-paper-plane icon-cart"></i></a>
+                       <i class="fas fa-paper-plane icon-cart"  data-toggle="modal" data-target="#orderModal"></i></a>
                       </span>
                       <span class="float-left font-weight-bold col-4">
                           <a href="{{ product.href }}" class="text-warning" data-toggle="tooltip" data-placement="top" title="Подробнее">
                         <i class="fas fa-list-ul icon-cart"></i></a>
-                      </span> 
+                      </span>
                        </div>
-                      </div>              
+                      </div>
                     </div>
                   </div>
                 </div>
               {% endfor %}
               </div>
             </div>
-          </div>  
+          </div>
       </section>
-
